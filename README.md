@@ -1,5 +1,7 @@
 # 🚀 Vue Nuxt 3 + Pinia + Tailwind TODO App
 
+> **Note:** This project uses [Cypress](https://www.cypress.io/) for end-to-end testing with a full BDD structure and TypeScript support.
+
 A modern, beautiful TODO application built with **Vue.js 3**, **Nuxt 3**, **Pinia** for state management, and **Tailwind CSS** for stunning UI design.
 
 ![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
@@ -74,8 +76,67 @@ Before running this frontend application, you need to set up the backend API:
    npm run dev
    ```
 
-5. **Open your browser:**
-   Navigate to `http://localhost:3001`
+6. **Open your browser:**
+   Navigate to `http://localhost:4000`
+
+## 🧪 Testing
+
+This project includes comprehensive end-to-end tests using **Cypress** with **TypeScript** and **BDD (Behavior Driven Development)** structure.
+
+### Test Structure
+
+Tests follow BDD style with the following structure:
+- `FEATURE`: The main feature being tested
+- `GIVEN`: The initial context/state
+- `WHEN`: The action or event that occurs
+- `SCENARIO`: The specific scenario being tested
+- `THEN`: The expected outcome (only this goes in `it()` blocks)
+
+### Running Tests
+
+**Prerequisites:**
+- Make sure the development server is running: `npm run dev`
+- The application should be accessible at `http://localhost:4000`
+
+**Commands:**
+```bash
+# Run all E2E tests in headless mode (default browser)
+npm run test:e2e
+
+# Run tests in specific browsers (with browser window visible)
+npm run test:e2e:chrome    # Chrome browser (headed)
+npm run test:e2e:firefox   # Firefox browser (headed)
+npm run test:e2e:edge      # Edge browser (headed)
+npm run test:e2e:electron  # Electron browser (headed)
+
+# Run tests in specific browsers (headless mode)
+npm run test:e2e:chrome:headless    # Chrome browser (headless)
+npm run test:e2e:firefox:headless   # Firefox browser (headless)
+npm run test:e2e:edge:headless      # Edge browser (headless)
+npm run test:e2e:electron:headless  # Electron browser (headless)
+
+# Open Cypress Test Runner (interactive mode)
+npm run test:e2e:open
+
+# Run Cypress directly
+npm run cypress:run
+npm run cypress:open
+```
+
+**Test Coverage:**
+- ✅ 29 tests covering homepage functionality
+- ✅ Form validation and submission
+- ✅ UI elements and styling
+- ✅ User interactions and navigation
+- ✅ localStorage persistence
+- ✅ Social media links validation
+
+### Test Files
+
+- `cypress/e2e/homepage.cy.ts` - Comprehensive tests for the homepage functionality
+- `cypress/support/commands.ts` - Custom Cypress commands
+- `cypress.config.ts` - Cypress configuration
+- `cypress/tsconfig.json` - TypeScript configuration for Cypress
 
 ## 🎯 Usage
 
@@ -106,7 +167,14 @@ vue-nuxt3-pinia/
 │       └── [id].vue              # Edit TODO
 ├── stores/
 │   └── user.ts                   # Pinia store for user data
+├── cypress/
+│   ├── e2e/
+│   │   └── homepage.cy.ts        # E2E tests for homepage
+│   ├── support/
+│   │   └── commands.ts           # Custom Cypress commands
+│   └── tsconfig.json             # TypeScript config for Cypress
 ├── nuxt.config.ts                # Nuxt configuration
+├── cypress.config.ts             # Cypress configuration
 ├── tailwind.config.js            # Tailwind CSS configuration
 └── .env                          # Environment variables
 ```
