@@ -2,12 +2,13 @@
 
 > **Note:** This project uses [Cypress](https://www.cypress.io/) for end-to-end testing with a full BDD structure and TypeScript support.
 
-A modern, beautiful TODO application built with **Vue.js 3**, **Nuxt 3**, **Pinia** for state management, and **Tailwind CSS** for stunning UI design.
-
 ![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
 ![Nuxt](https://img.shields.io/badge/Nuxt-3.x-00DC82?style=for-the-badge&logo=nuxt.js&logoColor=white)
 ![Pinia](https://img.shields.io/badge/Pinia-2.x-yellow?style=for-the-badge&logo=vue.js&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Cypress](https://img.shields.io/badge/Cypress-E2E-17202C?style=for-the-badge&logo=cypress&logoColor=white)
+
+A modern, beautiful TODO application built with **Vue.js 3**, **Nuxt 3**, **Pinia** for state management, and **Tailwind CSS** for stunning UI design.
 
 ## ✨ Features
 
