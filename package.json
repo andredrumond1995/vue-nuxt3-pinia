@@ -2,6 +2,12 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
+  "description": "A modern TODO app built with Vue 3, Nuxt 3, Pinia, Tailwind CSS, and Cypress for E2E testing.",
+  "author": {
+    "name": "André Drumond",
+    "email": "andredrumond1995@gmail.com",
+    "url": "https://github.com/andredrumond1995"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --port 4000",
